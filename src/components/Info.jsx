@@ -1,5 +1,4 @@
 import React from "react";
-import cnc from "../images/CNC.jpg";
 
 const Info = () => {
   return (
