@@ -31,6 +31,8 @@ Variables
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
+  --clr-dark-grey: #121212; /* New variable for dark grey background */
+  --clr-darker-grey: #1e1e1e; /* New variable for even darker grey background */
   --ff-primary: "Lato", sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
@@ -55,8 +57,8 @@ html {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: var(--clr-white);
-  color: var(--clr-grey-1);
+  background: var(--clr-darker-grey);
+  color: var(--clr-white);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -265,7 +267,7 @@ Services
 ===============
 */
 .services {
-  background: var(--clr-grey-10);
+  background: var(--clr-dark-grey);
 }
 .service {
   text-align: center;
@@ -324,7 +326,7 @@ Featured Tours
 
 .tour-card {
   transition: var(--transition);
-  background: var(--clr-grey-10);
+  background: var(--clr-dark-grey);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
@@ -456,7 +458,7 @@ Navbar
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--clr-white);
+  background: var(--clr-dark-grey);
   box-shadow: var(--dark-shadow);
   z-index: 2;
   height: 4rem;
@@ -561,7 +563,7 @@ Navbar
 
 .contact {
   padding: 5rem 0;
-  background: var(--clr-grey-10);
+  background: var(--clr-dark-grey);
 }
 
 .section-title {
