@@ -497,12 +497,12 @@ Navbar
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   transition: var(--transition);
-  color: var(--clr-grey-1);
+  color: var(--clr-primary-5); /* Updated color */
   cursor: pointer;
   font-size: 1rem;
 }
 .nav-link:hover {
-  color: var(--clr-primary-1);
+  color: var(--clr-primary-8); /* Adjusted hover color */
   background: var(--clr-primary-8);
   padding-left: 2.25rem;
 }
