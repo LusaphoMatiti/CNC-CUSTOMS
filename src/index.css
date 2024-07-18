@@ -464,6 +464,7 @@ Navbar
   height: 4rem;
   display: flex;
   align-items: center;
+  color: #fff;
 }
 .nav-icons {
   display: none;
