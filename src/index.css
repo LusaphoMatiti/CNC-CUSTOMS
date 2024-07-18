@@ -558,3 +558,156 @@ Navbar
     color: var(--clr-primary-8);
   }
 }
+
+.contact {
+  padding: 5rem 0;
+  background: var(--clr-grey-10);
+}
+
+.section-title {
+  margin-bottom: 4rem;
+}
+
+.section-title h2 {
+  text-transform: uppercase;
+}
+
+.section-title span {
+  color: var(--clr-primary-5);
+}
+
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.contact-info h3 {
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.contact-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: var(--clr-grey-1);
+  transition: var(--transition);
+}
+
+.contact-icon:hover {
+  color: var(--clr-primary-5);
+}
+
+.contact-form {
+  background: var(--clr-white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--clr-grey-8);
+  border-radius: var(--radius);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--clr-primary-5);
+}
+
+.info {
+  position: relative;
+  padding: 5rem 0;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 34, 85, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("./images/CNC.jpg") center/cover no-repeat; /* Use the correct path for your image */
+  color: var(--clr-white); /* Adjust text color as needed */
+}
+
+.info-center {
+  position: relative;
+  z-index: 1; /* Ensures text is above background */
+}
+
+.info-info h3 {
+  color: var(--clr-primary-5);
+  margin-bottom: 1rem;
+}
+
+.info-info p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+
+/* Side menu container */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: var(--clr-grey-1);
+  color: var(--clr-white);
+  transition: var(--transition);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Show side menu when active */
+.side-menu.show {
+  right: 0;
+}
+
+/* Side menu links */
+.side-menu a {
+  color: var(--clr-white);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.side-menu a:hover {
+  color: var(--clr-primary-5);
+}
+
+/* Close button */
+.side-menu .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--clr-white);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.side-menu .close-btn:hover {
+  color: var(--clr-primary-5);
+}
