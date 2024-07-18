@@ -276,7 +276,7 @@ Services
 ===============
 */
 .services {
-  background: var(--clr-grey-10);
+  background: var(--clr-dark-grey);
 }
 .service {
   text-align: center;
@@ -335,7 +335,7 @@ Featured Tours
 
 .tour-card {
   transition: var(--transition);
-  background: var(--clr-grey-10);
+  background: var(--clr-dark-grey);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
@@ -467,7 +467,7 @@ Navbar
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--clr-dark-grey);
+  background: #232323;
   box-shadow: var(--dark-shadow);
   z-index: 2;
   height: 4rem;
