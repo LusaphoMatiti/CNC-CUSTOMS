@@ -5,31 +5,31 @@ Variables
 */
 
 :root {
-  /* primary color variables */
+  /* dark shades of primary color*/
   --clr-primary-1: hsl(184, 91%, 17%);
   --clr-primary-2: hsl(185, 84%, 25%);
   --clr-primary-3: hsl(185, 81%, 29%);
   --clr-primary-4: hsl(184, 77%, 34%);
+  /* primary/main color */
   --clr-primary-5: hsl(185, 62%, 45%);
+  /* lighter shades of primary color */
   --clr-primary-6: hsl(185, 57%, 50%);
   --clr-primary-7: hsl(184, 65%, 59%);
   --clr-primary-8: hsl(184, 80%, 74%);
   --clr-primary-9: hsl(185, 94%, 87%);
   --clr-primary-10: hsl(186, 100%, 94%);
-
   /* darkest grey - used for headings */
-  --clr-grey-1: hsl(0, 0%, 10%); /* Very dark grey for navbar */
-  --clr-grey-2: hsl(0, 0%, 15%); /* Dark grey for tour cards */
-  --clr-grey-3: hsl(0, 0%, 20%);
-  --clr-grey-4: hsl(0, 0%, 25%);
-  --clr-grey-5: hsl(0, 0%, 30%);
-  --clr-grey-6: hsl(0, 0%, 40%);
-  --clr-grey-7: hsl(0, 0%, 50%);
-  --clr-grey-8: hsl(0, 0%, 60%);
-  --clr-grey-9: hsl(0, 0%, 70%);
-  --clr-grey-10: hsl(0, 0%, 80%);
-
-  --clr-black: hsl(0, 0%, 0%); /* Black for overall background */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
   --ff-primary: "Lato", sans-serif;
   --transition: all 0.3s linear;
@@ -55,8 +55,8 @@ html {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: var(--clr-black);
-  color: var(--clr-grey-5);
+  background: var(--clr-white);
+  color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -68,7 +68,7 @@ a {
 }
 img:not(.nav-logo) {
   width: 100%;
-  margin-right: 40px;
+  display: block;
 }
 
 h1,
@@ -206,12 +206,8 @@ Hero
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background: linear-gradient(
-        135deg,
-        rgba(0, 34, 85, 0.8),
-        rgba(255, 255, 255, 0.8)
-      ),
-      url("./images/main.jpg") center/cover no-repeat;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./images/main.jpeg") center/cover no-repeat;
   }
   .hero-banner {
     padding: 0;
@@ -328,7 +324,7 @@ Featured Tours
 
 .tour-card {
   transition: var(--transition);
-  background: var(--clr-grey-2);
+  background: var(--clr-grey-10);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
@@ -460,16 +456,12 @@ Navbar
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--clr-grey-1);
+  background: var(--clr-white);
   box-shadow: var(--dark-shadow);
   z-index: 2;
   height: 4rem;
   display: flex;
   align-items: center;
-}
-
-.nav-logo {
-  margin-left: -40px; /* Adjust this value as needed */
 }
 .nav-icons {
   display: none;
@@ -526,10 +518,6 @@ Navbar
   .nav-toggle {
     display: none;
   }
-
-  .nav-logo {
-    margin-left: -40px; /* Adjust this value as needed */
-  }
   /* show links */
   .nav-links {
     height: auto;
@@ -569,157 +557,4 @@ Navbar
   .nav-icon:hover {
     color: var(--clr-primary-8);
   }
-}
-
-.contact {
-  padding: 5rem 0;
-  background: var(--clr-grey-10);
-}
-
-.section-title {
-  margin-bottom: 4rem;
-}
-
-.section-title h2 {
-  text-transform: uppercase;
-}
-
-.section-title span {
-  color: var(--clr-primary-5);
-}
-
-.contact-info {
-  margin-bottom: 2rem;
-}
-
-.contact-info h3 {
-  margin-bottom: 1rem;
-}
-
-.contact-info p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
-
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-
-.contact-icon {
-  font-size: 2rem;
-  margin-right: 1rem;
-  color: var(--clr-grey-1);
-  transition: var(--transition);
-}
-
-.contact-icon:hover {
-  color: var(--clr-primary-5);
-}
-
-.contact-form {
-  background: var(--clr-white);
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--light-shadow);
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.form-control {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid var(--clr-grey-8);
-  border-radius: var(--radius);
-}
-
-.form-control:focus {
-  outline: none;
-  border-color: var(--clr-primary-5);
-}
-
-.info {
-  position: relative;
-  padding: 5rem 0;
-  background: linear-gradient(
-      135deg,
-      rgba(0, 34, 85, 0.8),
-      rgba(255, 255, 255, 0.8)
-    ),
-    url("./images/CNC.jpg") center/cover no-repeat; /* Use the correct path for your image */
-  color: var(--clr-white); /* Adjust text color as needed */
-}
-
-.info-center {
-  position: relative;
-  z-index: 1; /* Ensures text is above background */
-}
-
-.info-info h3 {
-  color: var(--clr-primary-5);
-  margin-bottom: 1rem;
-}
-
-.info-info p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
-
-/* Side menu container */
-.side-menu {
-  position: fixed;
-  top: 0;
-  right: -300px;
-  width: 300px;
-  height: 100%;
-  background: var(--clr-grey-1);
-  color: var(--clr-white);
-  transition: var(--transition);
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Show side menu when active */
-.side-menu.show {
-  right: 0;
-}
-
-/* Side menu links */
-.side-menu a {
-  color: var(--clr-white);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  transition: var(--transition);
-}
-
-.side-menu a:hover {
-  color: var(--clr-primary-5);
-}
-
-/* Close button */
-.side-menu .close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--clr-white);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.side-menu .close-btn:hover {
-  color: var(--clr-primary-5);
 }
