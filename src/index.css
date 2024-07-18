@@ -152,6 +152,8 @@ p {
 }
 .section-title h2 {
   text-transform: uppercase;
+  margin-bottom: 4rem;
+  margin-top: 30px; /* Added margin-top */
 }
 .section-title span {
   color: var(--clr-primary-5);
@@ -229,6 +231,10 @@ About
 .about-img,
 .about-info {
   margin-bottom: 2rem;
+}
+
+.about-info p {
+  color: var(--clr-white);
 }
 
 @media screen and (min-width: 992px) {
@@ -601,16 +607,16 @@ Navbar
 .contact-icon {
   font-size: 2rem;
   margin-right: 1rem;
-  color: var(--clr-grey-1);
+  color: var(--clr-primary-5);
   transition: var(--transition);
 }
 
 .contact-icon:hover {
-  color: var(--clr-primary-5);
+  color: var(--clr-primary-8); /* Adjusted hover color */
 }
 
 .contact-form {
-  background: var(--clr-white);
+  background: var(--clr-dark-grey);
   padding: 2rem;
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
