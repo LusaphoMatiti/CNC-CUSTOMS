@@ -62,7 +62,7 @@ const Footer = () => {
         <p className="footer-note">
           Website created, maintained, and SEO by{" "}
           <a
-            href="https://lmdevpro.com"
+            href="https://lmdevpro.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
