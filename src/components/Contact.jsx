@@ -1,7 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { socialLinks } from "../data";
+import axios from "axios";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios
+      .post("https://www.cnccustoms.co.za/send_email.php", formData)
+      .then((response) => {
+        console.log("Message sent successfully:", response);
+        setIsSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Error sending message:", error);
+      });
+  };
+
   return (
     <section className="contact section">
       <div className="section-title">
@@ -47,38 +82,51 @@ const Contact = () => {
           </ul>
         </div>
         <div className="contact-form">
-          <form action="https://formspree.io/f/{your-form-id}" method="POST">
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="form-control"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="form-control"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                className="form-control"
-              ></textarea>
-            </div>
-            <button type="submit" className="btn">
-              Send Message
-            </button>
-          </form>
+          {isSubmitted ? (
+            <p>Thank you! Your message has been sent.</p>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="name">Name: </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="form-control"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="form-control"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  className="form-control"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" className="btn">
+                Send Message
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </section>
