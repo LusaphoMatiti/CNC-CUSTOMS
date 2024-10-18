@@ -22,7 +22,10 @@ const Contact = () => {
     e.preventDefault();
 
     axios
-      .post("https://www.cnccustoms.co.za/send_email.php", formData)
+      .post(
+        "https://www.cnccustoms.co.za/send_email.php",
+        new URLSearchParams(formData)
+      )
       .then((response) => {
         console.log("Message sent successfully:", response);
         setIsSubmitted(true);
