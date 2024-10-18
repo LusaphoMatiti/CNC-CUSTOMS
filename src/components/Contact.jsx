@@ -24,7 +24,7 @@ const Contact = () => {
     // Replace with your EmailJS service ID, template ID, and user ID
     emailjs
       .send(
-        "service_g0xp96n", // Your service ID
+        "service_afrihost", // Your service ID
         "template_yj459ap", // Your template ID
         {
           name: formData.name, // Ensure this matches the template's variable name
