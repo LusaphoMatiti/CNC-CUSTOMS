@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { socialLinks } from "../data";
-import axios from "axios";
+import emailjs from "emailjs-com"; // Import EmailJS
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,10 +21,17 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios
-      .post(
-        "https://www.cnccustoms.co.za/send_email.php",
-        new URLSearchParams(formData)
+    // Replace with your EmailJS service ID, template ID, and user ID
+    emailjs
+      .send(
+        "service_afrihost", // Your service ID
+        "template_yj459ap", // Your template ID
+        {
+          name: formData.name, // Ensure this matches the template's variable name
+          email: formData.email, // Ensure this matches the template's variable name
+          message: formData.message, // Ensure this matches the template's variable name
+        },
+        "2IR0WLl5kUpw67rHM" // Your user ID
       )
       .then((response) => {
         console.log("Message sent successfully:", response);
