@@ -31,7 +31,7 @@ const Contact = () => {
           email: formData.email, // Ensure this matches the template's variable name
           message: formData.message, // Ensure this matches the template's variable name
         },
-        "2IR0WLl5kUpw67rHM" // Your user ID
+        "6OKsfr5CIv9pf60UZ" // Your user ID
       )
       .then((response) => {
         console.log("Message sent successfully:", response);
